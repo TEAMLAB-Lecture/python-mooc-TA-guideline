@@ -21,7 +21,10 @@ Google sheets에서 암호를 임의로 생성하는 방법
  CHOOSE(RANDBETWEEN(1,2),CHAR(RANDBETWEEN(48,57)),
                          CHAR(RANDBETWEEN(65,90)))
 ```
-````python
+```python
+import csv
+from account.models import TeamlabUser
+
 with open('dd.csv', 'r') as csvfile:
   student = csv.reader(csvfile, delimiter=',', quotechar='|')
   studnet_list = []
